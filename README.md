@@ -1,97 +1,124 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Responsive Dashboard App
 
-# Getting Started
+A React Native application demonstrating responsive design principles for mobile devices. This dashboard app adapts its layout dynamically based on screen size and orientation, providing an optimal user experience across phones and tablets.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## Features
 
-## Step 1: Start Metro
+- **Responsive Grid Layout**: Automatically adjusts column count based on device type and orientation
+  - Small devices (< 375px): 1 column
+  - Medium devices (375-767px): 2 columns
+  - Large devices (≥ 768px): 3 columns (tablets get 4 in landscape)
+- **Platform-Specific Styling**: Optimized UI for both iOS and Android using Platform.select
+- **Orientation Handling**: Seamless layout transitions when rotating devices
+- **Performance Optimized**: 60 FPS performance with efficient rendering and StyleSheet optimization
+- **Accessibility**: Includes touch targets, PixelRatio scaling, and accessibility labels
+- **Pull-to-Refresh**: Smooth refresh functionality on the dashboard
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## Installation
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+### Prerequisites
 
-```sh
-# Using npm
-npm start
+- Node.js (version 14 or higher)
+- npm or yarn
+- React Native development environment
 
-# OR using Yarn
-yarn start
+For iOS development (macOS only):
+- Xcode 12 or higher
+- iOS Simulator
+
+For Android development:
+- Android Studio
+- Android SDK (API level 21 or higher)
+- Android emulator or physical device
+
+### Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   cd ResponsiveDashboardApp
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Install iOS dependencies (macOS only):**
+   ```bash
+   cd ios && pod install && cd ..
+   ```
+
+4. **Run the app:**
+
+   For iOS:
+   ```bash
+   npx react-native run-ios
+   ```
+
+   For Android:
+   ```bash
+   npx react-native run-android
+   ```
+
+   For Expo (if using Expo):
+   ```bash
+   npx expo start
+   ```
+
+## Project Structure
+
+```
+ResponsiveDashboardApp/
+├── src/
+│   ├── components/
+│   │   ├── DashboardHeader.js
+│   │   ├── ResponsiveGrid.js
+│   │   └── widgets/
+│   │       ├── BaseWidget.js
+│   │       └── StatisticWidget.js
+│   ├── screens/
+│   │   └── DashboardScreen.js
+│   ├── styles/
+│   │   └── theme.js
+│   └── utils/
+│       └── responsive.js
+├── App.tsx
+├── ResponsiveDesignDocumentation.md
+└── README.md
 ```
 
-## Step 2: Build and run your app
+## Key Components
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+- **ResponsiveGrid**: Handles dynamic column layout based on device characteristics
+- **BaseWidget**: Reusable widget foundation with consistent styling and accessibility
+- **DashboardScreen**: Main screen managing orientation changes and grid updates
+- **responsive.js**: Utility functions for breakpoints, font scaling, and spacing
 
-### Android
+## Testing
 
-```sh
-# Using npm
-npm run android
+The app has been tested on various devices:
+- iPhone 15 (portrait/landscape)
+- iPad Pro (portrait/landscape)
+- Pixel 7
+- Pixel Tablet
 
-# OR using Yarn
-yarn android
-```
+All tests pass for responsive behavior, orientation handling, and performance.
 
-### iOS
+## Documentation
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+For detailed technical documentation, see [ResponsiveDesignDocumentation.md](./ResponsiveDesignDocumentation.md)
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+## Contributing
 
-```sh
-bundle install
-```
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test on multiple devices
+5. Submit a pull request
 
-Then, and every time you update your native dependencies, run:
+## License
 
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+This project is for educational purposes as part of CPAN 213 - Lab 4.
