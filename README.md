@@ -100,12 +100,7 @@ ResponsiveDashboardApp/
 ## Testing
 
 The app has been tested on various devices:
-- iPhone 15 (portrait/landscape)
-- iPad Pro (portrait/landscape)
-- Pixel 7
-- Pixel Tablet
-
-All tests pass for responsive behavior, orientation handling, and performance.
+-Pixel 4  but should  work on any device
 
 ## Documentation
 
