@@ -109,7 +109,7 @@ All tests pass for responsive behavior, orientation handling, and performance.
 
 ## Documentation
 
-For detailed technical documentation, see [ResponsiveDesignDocumentation.md](./ResponsiveDesignDocumentation.md)
+For detailed technical documentation, see  the Documentation.md 
 
 ## Contributing
 
@@ -119,6 +119,3 @@ For detailed technical documentation, see [ResponsiveDesignDocumentation.md](./R
 4. Test on multiple devices
 5. Submit a pull request
 
-## License
-
-This project is for educational purposes as part of CPAN 213 - Lab 4.
