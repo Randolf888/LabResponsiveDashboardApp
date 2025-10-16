@@ -79,25 +79,9 @@ For Android development:
 ## Testing
 
 The app has been tested on various devices:
-- iPhone 15 (portrait/landscape)
-- iPad Pro (portrait/landscape)
-- Pixel 7
-- Pixel Tablet
-
-All tests pass for responsive behavior, orientation handling, and performance.
+-Pixel 4  but should  work on any device
 
 ## Documentation
 
-For detailed technical documentation, see [ResponsiveDesignDocumentation.md](./ResponsiveDesignDocumentation.md)
+For detailed technical documentation, see  the Documentation.md 
 
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test on multiple devices
-5. Submit a pull request
-
-## License
-
-This project is for educational purposes as part of CPAN 213 - Lab 4.
