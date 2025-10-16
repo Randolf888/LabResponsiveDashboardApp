@@ -68,27 +68,6 @@ For Android development:
    npx expo start
    ```
 
-## Project Structure
-
-```
-ResponsiveDashboardApp/
-├── src/
-│   ├── components/
-│   │   ├── DashboardHeader.js
-│   │   ├── ResponsiveGrid.js
-│   │   └── widgets/
-│   │       ├── BaseWidget.js
-│   │       └── StatisticWidget.js
-│   ├── screens/
-│   │   └── DashboardScreen.js
-│   ├── styles/
-│   │   └── theme.js
-│   └── utils/
-│       └── responsive.js
-├── App.tsx
-├── ResponsiveDesignDocumentation.md
-└── README.md
-```
 
 ## Key Components
 

@@ -11,17 +11,17 @@
 
 ### Breakpoint Plan
 
-This app changes its layout based on the screen size, so it looks good on any device. The breakpoints are in `src/utils/responsive.js`, using the `getDeviceType()` function.
+This app changes its layout based on the screen size, so it looks  th same  on any device. The breakpoints are in `src/utils/responsive.js`, using the `getDeviceType()` function.
 
 **Here's the Breakdown:**
 
-* Small devices: Less than 375px wide - one column layout.
+* Small devices:  get Less than 375px wide - one column layout.
 * Medium devices: 375-767px - two columns.
 * Large devices: 768px or wider - three columns (for tablets).
 
 **Why These Sizes?**
 
-We picked these sizes because they're typical for phones and tablets. 375px separates older, smaller phones, and 768px is where tablets start. If you turn your device, it recalculates the layout to keep things looking good.
+I picked these sizes because they're common  for phones and tablets. 375px separates older, smaller phones, and 768px is where tablets start. If you turn your device, it recalculates the layout to keep things looking good.
 
 ### Grid System
 
@@ -135,31 +135,9 @@ React Native DevTools shows a steady 60 FPS during normal use. Orientation chang
 
 ## Problems and Fixes
 
-### Problem 1: Layout Issues on Different Devices
-
-**What Happened:** The grid looked cramped on small screens, turn device caused weird layout jumps.
-
-**The Fix:** Used responsive utility functions and adaptive padding to make components scale correctly. Added event listeners and state updates for orientation handling.
-
-**What I Learned:** Orientation handling and memoization are important. Planning your responsive design early saves time.
-
 ### Problem 2: Different Styles on iOS and Android
 
-**What Happened:** Shadows and elevations looked different on iOS and Android.
-
-**The Fix:** Used Platform.select to apply conditional styling in the theme. Used shadow properties for iOS and elevation for Android.
-
 **What I Learned:** Consider platform differences from the beginning. Utility functions are good for consistent responsive behavior.
-
-### Problem 3: Performance During Orientation Changes
-
-**What Happened:** Re-renders during orientation changes slowed things down.
-
-**The Fix:** Optimized StyleSheet usage with StyleSheet.create for static styles. Added proper cleanup in useEffect for event listeners and batched state updates efficiently.
-
-**What I Learned:** Memoizing calculations and avoiding operations in the render cycle help. Test thoroughly on different devices.
-
----
 
 ## Testing Results
 
@@ -216,7 +194,7 @@ This lab taught me how important it is to design for mobile first and test on di
 
 ### What to improve
 
-I could have better automated tests for layout and design more comprehensive. I could also systematic with automated FPS tracking. Also writing better comments.
+I could have put all more  comments  
 
 ### How to apply for future projects
 
