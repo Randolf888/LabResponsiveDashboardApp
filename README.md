@@ -106,11 +106,3 @@ The app has been tested on various devices:
 
 For detailed technical documentation, see  the Documentation.md 
 
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test on multiple devices
-5. Submit a pull request
-
